@@ -9,3 +9,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+.toolbar-background {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    border-width: var(--border-width);
+    border-style: var(--border-style);
+    border-color: var(--border-color);
+    background: var(--background);
+    contain: strict;
+    opacity: var(--opacity);
+    z-index: -1;
+    pointer-events: none;
+}

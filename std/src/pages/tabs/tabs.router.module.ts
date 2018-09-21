@@ -14,6 +14,10 @@ const routes: Routes = [
                 path: 'sub-page/:pageID',
                 component: SubPage,
                 outlet: 'sub-page'
+            },{
+                path: 'sub-page/:pageID',
+                component: SubPage,
+                outlet: 'sub-page'
             }
         ]
     }

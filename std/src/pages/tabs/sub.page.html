@@ -1,18 +1,82 @@
-<ion-header>
-  <ion-toolbar >
-    <ion-title>e卡惠实时营销平台</ion-title>
-    <!--<ion-label class="h_name" text-right>{{currentMember?.name}}</ion-label>-->
-  </ion-toolbar>
+<ion-header no-border>
+    <ion-toolbar color="primary" >
+        <ion-title class="titel-size">安查查</ion-title>
+        <!--<ion-label class="h_name" text-right>{{currentMember?.name}}</ion-label>-->
+    </ion-toolbar>
 </ion-header>
 <ion-content>
     <div class="home">
-        <div class="top">
-            <p class="photo"><img src="assets/images/head.png"></p>
-            <p class="name">海淀支行 王伟</p>
-        </div>
+        <ion-row class="top-bg">
+            <ion-col>
+                <ion-card class="search-bg">
+                    <ion-item lines="none" class="home-search">
+                        <ion-input  placeholder="请输入关键字" ></ion-input>
+                        <button class="search-button"><img src="../assets/images/index/menu_03.jpg"></button>          
+                    </ion-item>
+                    <ion-card-content class="contair-card">
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_07.jpg">
+                    <p>所有资源</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_09.jpg">
+                    <p>国家法律</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_11.jpg">
+                    <p>安全法规</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_16.jpg">
+                    <p>地方规章</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_17.jpg">
+                    <p>集团规章</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_18.jpg">
+                    <p>重要文件</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_22.jpg">
+                    <p>GB</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_23.jpg">
+                    <p>AQ</p>
+                </div>
+            </ion-col>
+            <ion-col class="home-meun-contair">
+                <div text-center>
+                    <img src="../assets/images/index/menu_24.jpg">
+                    <p>其他文件</p>
+                </div>
+            </ion-col>
+        </ion-row>
     </div>
-  <ng-container *ngFor="let item of tabs">
-      <c-item [imgUrl]="item.memo" [item]="item" [label]="item.name" (do)="navigate($event)"></c-item>
-  </ng-container>
-  
+    <ng-container *ngFor="let item of tabs">
+        <c-item [imgUrl]="item.memo" [item]="item" [label]="item.name" (do)="navigate($event)"></c-item>
+    </ng-container>
+
 </ion-content>

@@ -4,12 +4,12 @@ $font-path: "../assets/icon/fonts";
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #488aff;
+  --ion-color-primary: #5acc9a;
   --ion-color-primary-rgb: 72,138,255;
   --ion-color-primary-contrast: #fff;
   --ion-color-primary-contrast-rgb: 255,255,255;
-  --ion-color-primary-shade: #3f79e0;
-  --ion-color-primary-tint: #5a96ff;
+  --ion-color-primary-shade: #5acc9a;
+  --ion-color-primary-tint: #5acc9a;
 
   /** secondary **/
   --ion-color-secondary: #32db64;
@@ -74,4 +74,30 @@ $font-path: "../assets/icon/fonts";
   --ion-color-dark-contrast-rgb: 255,255,255;
   --ion-color-dark-shade: #1e1e1e;
   --ion-color-dark-tint: #383838;
+  
+  .toolbar-container {
+    padding: var(--padding-top) var(--padding-end) var(--padding-bottom) var(--padding-start);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    min-height: var(--min-height);
+    contain: content;
+    overflow: hidden;
+    z-index: 10;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #59ca98;
+}
 }
