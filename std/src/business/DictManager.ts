@@ -1,4 +1,4 @@
-import { BaseManager } from './BaseManager';
+import { BaseManager } from 'core';
 import { Injectable } from '@angular/core';
 
 @Injectable()

@@ -13,6 +13,8 @@ import { IonicStorageModule } from "@ionic/storage";
 import { SharedModule } from 'shared';
 import { CoreModule, StartupService,CCore } from 'core'
 import { RoleFunctionManager } from "../business/RoleFunctionManager";
+import { HomeManager} from "../business/HomeManager";
+
 
 export function StartupServiceFactory(
     startupService: StartupService
@@ -47,6 +49,7 @@ export function StartupServiceFactory(
         StartupService,
         CCore,
         RoleFunctionManager,
+        HomeManager,
         {
             provide: APP_INITIALIZER,
             useFactory: StartupServiceFactory,

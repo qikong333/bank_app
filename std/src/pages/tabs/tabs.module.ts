@@ -1,30 +1,32 @@
+import { CDict } from './../../business/CDict';
+
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { TabsPageRoutingModule } from './tabs.router.module';
-
-import { TabsPage } from './tabs.page';
-
-import { CDict} from "../../business/CDict";
-import { DictManager} from "../../business/DictManager";
-import { CCore} from "../../business/CCore";
+import { TabsRoutingModule } from './tabs.router.module';
+import { TabsComponent } from './tabs';
+import { HomeModule } from './home.module';
 import { WebSocketService} from "../../business/WebSocketService";
-import { SubPageModule } from "./sub.page.module";
-
-
-import { NamedOutletDirective } from "../../directives/named.outlet";
+import { SubModule } from "./sub.module";
+import { RankModule } from '../rank/rank.module';
 
 @NgModule({
     imports: [
         IonicModule,
         CommonModule,
         FormsModule,
-        TabsPageRoutingModule,
-        SubPageModule
+        TabsRoutingModule,
+        HomeModule,
+        SubModule,
+        RankModule
     ],
-    declarations: [TabsPage,NamedOutletDirective],
-    providers : [CCore,CDict,DictManager,WebSocketService]
+    declarations: [
+        TabsComponent
+    ],
+    providers : [
+        CDict,
+        WebSocketService
+    ]
 })
-export class TabsPageModule {}
+export class TabsModule {}

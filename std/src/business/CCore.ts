@@ -318,5 +318,40 @@ export class CCore {
             }
         }
     }
+    changePower(direction, module) {
+        var powerPosition: number = 15;
+
+        this.storage.get(module + "Power").then(res => {
+            if (!this.isNull(res)) {
+                powerPosition = res;
+            }
+
+            if (this.isIncreasePower(direction)) {
+                if (powerPosition > 20) {
+                    this.toast("功率已设定到最大值");
+                } else {
+                    powerPosition = powerPosition + 5;
+                }
+            }
+
+            if (this.isReducedPower(direction)) {
+                if (powerPosition < 15) {
+                    this.toast("功率已设定到最小值");
+                } else {
+                    powerPosition = powerPosition - 5;
+                }
+            }
+
+            var powerArray = [{ "power": 10, "msg": "当前为小功率" }, { "power": 15, "msg": "当前为中功率" }, { "power": 20, "msg": "当前为大功率" }, { "power": 25, "msg": "当前为特大功率" }]
+            for (let i = 0; i < powerArray.length; i++) {
+                if (powerPosition == powerArray[i]['power']) {
+                    this.toast(powerArray[i]['msg']);
+                }
+            }
+            this.setPower(powerPosition);
+            this.storage.set(module + "Power", powerPosition);
+        });
+
+    }
 }
 

@@ -7,9 +7,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-all": "ng build shared && ng build core",
-    "pack-shared": "cd dist/shared && npm pack",
-    "pack-core": "cd dist/core && npm pack",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -33,6 +30,7 @@
     "@ngx-translate/http-loader": "^3.0.1",
     "core": "file:../lib/core-0.0.1.tgz",
     "core-js": "^2.5.3",
+    "i": "^0.3.6",
     "node-sass": "^4.9.3",
     "rxjs": "6.2.2",
     "shared": "file:../lib/shared-0.0.1.tgz",

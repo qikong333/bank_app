@@ -1,0 +1,8 @@
+<ion-tabs>
+  <ion-tab *ngFor="let tab of tabs" (ionSelect)="ionSelectChange($event)" [href]="tab.hasChild ? '/app/tabs/(sub-page:sub-page/' + tab.ID + ')' : '/app/tabs/(' + tab.extension + ':' + tab.extension + ')'" [name]="tab.extension" [label]="tab.name" [icon]="tab.memo" >
+    <ion-router-outlet name="home" *ngIf="tab.extension == 'home'"></ion-router-outlet>
+    <ion-router-outlet name="rank" *ngIf="tab.extension == 'rank'"></ion-router-outlet>
+    <ion-router-outlet name="mine" *ngIf="tab.extension == 'mine'"></ion-router-outlet>
+    <ion-router-outlet name="sub-page" *ngIf="tab.hasChild"></ion-router-outlet>
+  </ion-tab>
+</ion-tabs>

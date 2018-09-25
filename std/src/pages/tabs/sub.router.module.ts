@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SubPage } from "./sub.page";
+import { SubComponent } from "./sub";
+import { ChangePasswordComponent } from './../member/changepassword';
 
 const routes: Routes = [
   {
     path: '',
-    component: SubPage
+    component: SubComponent
+  },
+  {
+    path: 'mine/modify',
+    component: ChangePasswordComponent
   }
 ];
 
@@ -13,4 +18,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SubPageRoutingModule {}
+
+export class SubRoutingModule {}

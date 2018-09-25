@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title>e卡惠实时营销平台</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="home">
+        <div class="top">
+            <p class="photo"><img src="assets/images/slide/toux.jpg"></p>
+            <p class="name">{{currentMember.name}} {{currentMember.groupName}}</p>
+        </div>
+    </div>
+  <ng-container *ngFor="let item of tabs">
+      <c-item [imgUrl]="item.memo" [item]="item" [label]="item.name" (do)="navigate($event)"></c-item>
+  </ng-container>
+  
+</ion-content>

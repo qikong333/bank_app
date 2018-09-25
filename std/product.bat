@@ -1,1 +1,1 @@
-ng build --prod --aot
+ng build

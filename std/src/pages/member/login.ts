@@ -11,7 +11,7 @@ import { RoleFunctionManager } from "../../business/RoleFunctionManager";
     styleUrls : ['./login.scss']
 })
 
-export class LoginPage implements OnInit {
+export class LoginComponent implements OnInit {
 
     ngOnInit(): void {
     }
@@ -37,20 +37,6 @@ export class LoginPage implements OnInit {
                 }
             }
         });
-        // this.cCore.getCurrentMember().then(result => {
-        //     if (result) {
-        //         this.username = JSON.parse(result);
-        //         if (!this.cCore.isNull(this.username) && !this.cCore.isNull(this.password)) {
-        //             this.username = JSON.parse(result).data.username;
-        //             this.login();
-        //         }
-        //     }
-        // })
-        // window["CNativeBack"] = {
-        //     zone: this.zone,
-        //     sendIc: (value) => this.scanLogin(value),
-        //     component: this
-        // };
     }
     async login() {
         try {

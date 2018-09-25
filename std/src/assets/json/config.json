@@ -1,4 +1,4 @@
 ﻿{
-  "apiBase": "http://php.532t.com",
+  "apiBase": "http://bank.532t.com",
   "wsUrl": "ws://tool.532t.com:8089/pc"
 }
